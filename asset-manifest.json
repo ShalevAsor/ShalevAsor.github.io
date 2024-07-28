@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.47eea30a.css",
+    "main.css": "/static/css/main.d555810d.css",
     "main.js": "/static/js/main.5f9f0130.js",
     "static/media/projects_tile_puzzle.png": "/static/media/projects_tile_puzzle.848feea46ab41d14c8f9.png",
     "static/media/projects_pokemonCatch.png": "/static/media/projects_pokemonCatch.cbf28b133d9335304685.png",
@@ -10,11 +10,11 @@
     "static/media/myphoto.png": "/static/media/myphoto.506313454840b0be3c12.png",
     "static/media/project_tutor_time.jpg": "/static/media/project_tutor_time.ab1d703e872d11eaf7fc.jpg",
     "index.html": "/index.html",
-    "main.47eea30a.css.map": "/static/css/main.47eea30a.css.map",
+    "main.d555810d.css.map": "/static/css/main.d555810d.css.map",
     "main.5f9f0130.js.map": "/static/js/main.5f9f0130.js.map"
   },
   "entrypoints": [
-    "static/css/main.47eea30a.css",
+    "static/css/main.d555810d.css",
     "static/js/main.5f9f0130.js"
   ]
 }
