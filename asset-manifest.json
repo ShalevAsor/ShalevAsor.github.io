@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.cf990090.css",
-    "main.js": "/static/js/main.9fa7ad2f.js",
-    "static/media/projects_tile_puzzle.png": "/static/media/projects_tile_puzzle.848feea46ab41d14c8f9.png",
-    "static/media/projects_pokemonCatch.png": "/static/media/projects_pokemonCatch.cbf28b133d9335304685.png",
-    "static/media/projects_mapty.png": "/static/media/projects_mapty.1dd43f7e650404c7d45c.png",
-    "static/media/projects_algosolvingcpp.png": "/static/media/projects_algosolvingcpp.b685fc2d883bdcc20810.png",
-    "static/media/projects_geo_champ.png": "/static/media/projects_geo_champ.a36194d36c373d29cd33.png",
-    "static/media/myphoto.png": "/static/media/myphoto.506313454840b0be3c12.png",
-    "static/media/project_tutor_time.jpg": "/static/media/project_tutor_time.ab1d703e872d11eaf7fc.jpg",
-    "index.html": "/index.html",
-    "main.cf990090.css.map": "/static/css/main.cf990090.css.map",
-    "main.9fa7ad2f.js.map": "/static/js/main.9fa7ad2f.js.map"
+    "main.css": "/ShalevAsor.github.io/static/css/main.cf990090.css",
+    "main.js": "/ShalevAsor.github.io/static/js/main.82d9397d.js",
+    "static/media/projects_tile_puzzle.png": "/ShalevAsor.github.io/static/media/projects_tile_puzzle.848feea46ab41d14c8f9.png",
+    "static/media/projects_pokemonCatch.png": "/ShalevAsor.github.io/static/media/projects_pokemonCatch.cbf28b133d9335304685.png",
+    "static/media/projects_mapty.png": "/ShalevAsor.github.io/static/media/projects_mapty.1dd43f7e650404c7d45c.png",
+    "static/media/projects_algosolvingcpp.png": "/ShalevAsor.github.io/static/media/projects_algosolvingcpp.b685fc2d883bdcc20810.png",
+    "static/media/projects_geo_champ.png": "/ShalevAsor.github.io/static/media/projects_geo_champ.a36194d36c373d29cd33.png",
+    "static/media/myphoto.png": "/ShalevAsor.github.io/static/media/myphoto.506313454840b0be3c12.png",
+    "static/media/project_tutor_time.jpg": "/ShalevAsor.github.io/static/media/project_tutor_time.ab1d703e872d11eaf7fc.jpg",
+    "index.html": "/ShalevAsor.github.io/index.html",
+    "main.cf990090.css.map": "/ShalevAsor.github.io/static/css/main.cf990090.css.map",
+    "main.82d9397d.js.map": "/ShalevAsor.github.io/static/js/main.82d9397d.js.map"
   },
   "entrypoints": [
     "static/css/main.cf990090.css",
-    "static/js/main.9fa7ad2f.js"
+    "static/js/main.82d9397d.js"
   ]
 }
