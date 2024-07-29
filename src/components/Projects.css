@@ -1,0 +1,85 @@
+/* Projects section styles */
+.section__title--projects {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project {
+  width: 100%;
+  max-width: 30rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project__details {
+  padding: 1rem;
+  text-align: center;
+}
+
+.project__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.project__description {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.project__btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project__btn:hover {
+  background-color: var(--color-primary-darker);
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  .projects-container {
+    gap: 1rem; /* Reduce the gap between project cards */
+  }
+  
+  .project {
+    max-width: 90%; /* Allow project cards to be wider on small screens */
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .projects-container {
+    flex-direction: row;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 0 1rem; /* Add some padding on the sides */
+  }
+
+  .project {
+    max-width: 45%; /* Adjust width for landscape mode */
+  }
+}

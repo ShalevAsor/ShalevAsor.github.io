@@ -1,5 +1,3 @@
-/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
-
 :root {
   --color-primary: #1d8fd6;
   --color-secondary: #FFC436;
@@ -24,7 +22,6 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -39,7 +36,6 @@ body {
 .section {
   padding: 15rem 3rem;
   border-top: 1px solid #ddd;
-
   transition: transform 1s, opacity 1s;
 }
 
@@ -68,6 +64,7 @@ body {
   text-align: center;
   color: var(--header-text-color); /* Use the color variable for your header text */
 }
+
 /* Style for the content text */
 .section__content h4 {
   color: var(--text-color); /* Replace with your desired text color */
@@ -75,6 +72,7 @@ body {
   line-height: 1.6; /* Improve readability */
   margin-bottom: 1.5rem; /* Space between paragraphs */
 }
+
 #section--1 {
   text-align: center; /* Center-align the text */
   max-width: 800px; /* Adjust this value as needed */
@@ -129,622 +127,63 @@ img {
   filter: blur(20px);
 }
 
-/* NAVIGATION */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 9rem;
-  width: 100%;
-  padding: 0 6rem;
-  z-index: 100;
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 1200px) {
+  .features {
+    grid-template-columns: 1fr;
+    margin: 0 6rem;
+  }
 }
 
-/* nav and stickly class at the same time */
-.nav.sticky {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
-}
-
-.nav__logo {
-  height: 4.5rem;
-  transition: all 0.3s;
-}
-
-.nav__links {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.nav__item {
-  margin-left: 4rem;
-}
-
-.nav__link:link,
-.nav__link:visited {
-  font-size: 1.7rem;
-  font-weight: 400;
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  transition: all 0.3s;
-}
-
-.nav__link--btn:link,
-.nav__link--btn:visited {
-  padding: 0.8rem 2.5rem;
-  border-radius: 3rem;
-  background-color: var(--color-primary);
-  color: #222;
-}
-
-.nav__link--btn:hover,
-.nav__link--btn:active {
-  color: inherit;
-  background-color: var(--color-primary-darker);
-  color: #333;
-}
-
-/* HEADER */
-.header {
-  padding: 0 3rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header__title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 115rem;
-  text-align: center;
-  margin-top: 2rem; /* Adjusted top margin to reduce space */
-}
-
-.header__title h1 {
-  font-size: 8.25rem; /* Increased size (1.5 times bigger) */
-  line-height: 1.35;
-  margin-bottom: 0; /* Remove space below name */
-}
-
-.header__img {
-  width: 100%;
-  max-width: 30rem; /* Adjust as needed */
-  height: auto;
-  margin: -4rem 0; /* Reduced space around the image */
-}
-
-.header__content {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Space between "Full Stack Developer" and icons */
-  margin-top: 1rem; /* Small space above "Full Stack Developer" */
-}
-
-h4 {
-  font-size: 2.4rem;
-  font-weight: 500;
-  margin: 0; /* Remove margin to ensure no extra space */
-}
-
-.icon-link {
-  color: #000; /* Adjust icon color */
-  text-decoration: none;
-  font-size: 2rem; /* Adjust icon size */
-}
-
-.icon-link:hover {
-  color: #0073b1; /* LinkedIn blue */
-}
-
-.icon-link:nth-child(2):hover {
-  color: #333; /* GitHub black */
-}
-
-.btn--text {
-  margin-top: 1rem; /* Space between the "Full Stack Developer" section and the button */
-}
-
-/* FEATURES */
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin: 0 12rem;
-}
-
-.features__img {
-  width: 100%;
-}
-
-.features__feature {
-  align-self: center;
-  justify-self: center;
-  width: 70%;
-  font-size: 1.5rem;
-}
-
-.features__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary-opacity);
-  height: 5.5rem;
-  width: 5.5rem;
-  border-radius: 50%;
-  margin-bottom: 2rem;
-}
-
-.features__icon svg {
-  height: 2.5rem;
-  width: 2.5rem;
-  fill: var(--color-primary);
-}
-
-.features__header {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* OPERATIONS */
-.operations {
-  max-width: 100rem;
-  margin: 12rem auto 0 auto;
-
-  background-color: #fff;
-}
-
-.operations__tab-container {
-  display: flex;
-  justify-content: center;
-}
-
-.operations__tab {
-  margin-right: 2.5rem;
-  transform: translateY(-50%);
-}
-
-.operations__tab span {
-  margin-right: 1rem;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.operations__tab--1 {
-  background-color: var(--color-secondary);
-}
-
-.operations__tab--1:hover {
-  background-color: var(--color-secondary-darker);
-}
-
-.operations__tab--3 {
-  background-color: var(--color-tertiary);
-  margin: 0;
-}
-
-.operations__tab--3:hover {
-  background-color: var(--color-tertiary-darker);
-}
-
-.operations__tab--active {
-  transform: translateY(-66%);
-}
-
-.operations__content {
-  display: none;
-
-  /* JUST PRESENTATIONAL */
-  font-size: 1.7rem;
-  padding: 2.5rem 7rem 6.5rem 7rem;
-}
-
-.operations__content--active {
-  display: grid;
-  grid-template-columns: 7rem 1fr;
-  column-gap: 3rem;
-  row-gap: 0.5rem;
-}
-
-.operations__header {
-  font-size: 2.25rem;
-  font-weight: 500;
-  align-self: center;
-}
-
-.operations__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
-}
-
-.operations__icon svg {
-  height: 2.75rem;
-  width: 2.75rem;
-}
-
-.operations__content p {
-  grid-column: 2;
-}
-
-.operations__icon--1 {
-  background-color: var(--color-secondary-opacity);
-}
-.operations__icon--2 {
-  background-color: var(--color-primary-opacity);
-}
-.operations__icon--3 {
-  background-color: var(--color-tertiary-opacity);
-}
-.operations__icon--1 svg {
-  fill: var(--color-secondary-darker);
-}
-.operations__icon--2 svg {
-  fill: var(--color-primary);
-}
-.operations__icon--3 svg {
-  fill: var(--color-tertiary-darker);
-}
-
-/* FOOTER */
-.footer {
-  background-color: #0f0f0f;
-  color: #999;
-  padding: 4rem 0;
-}
-
-.footer__socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-.highlight {
-  position: relative;
-}
-
-.highlight::after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.7;
-  transform: scale(0.95, 0.9) skewX(-15deg); /* Adjusted scale values */
-  background-image: var(--gradient-primary);
-}
-.footer__socials a {
-  color: #999;
-  font-size: 2.5rem;
-  margin: 0 1.5rem;
-  transition: color 0.3s;
-}
-
-.footer__socials a:hover {
-  color: #fff;
-}
-
-.footer__copyright {
-  text-align: center;
-  font-size: 1.4rem;
-  margin-top: 2rem;
-}
-/*
-
-*/
-/* Projects section styles */
-/* SLIDER */
-.slider {
-  max-width: 100rem;
-  height: 50rem;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 50rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1s;
-}
-
-.project {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative; /* Ensure that the absolute positioning of the text box works */
-}
-
-.project__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-
-
-.project__details {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  background: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  max-width: 80%;
-  text-align: center; /* Center-align the text */
-  transition: transform 0.3s ease-in-out;
-}
-
-.project__details h2,
-.project__details p {
-  margin: 0; /* Remove default margins for cleaner look */
-}
-.project__details:hover {
-  transform: translateX(-50%) scale(1.05); /* Scale up the text box on hover */
-}
-
-.project__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.project__description {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-}
-
-
-.slider__btn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  border: none;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
-  cursor: pointer;
-}
-
-.slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
-
-.dots {
-  position: absolute;
-  bottom: 0.5%; /* Move dots lower from the bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem; /* Space between dots */
-}
-
-.dots__dot {
-  border: none;
-  background-color: #b9b9b9; /* Default color for inactive dots */
-  height: 1.1rem; /* Size of the dots */
-  width: 1.1rem; /* Size of the dots */
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s, opacity 0.3s;
-}
-
-.dots__dot:last-child {
-  margin: 0;
-}
-
-.dots__dot--active {
-  background-color: var(--color-primary-darker); /* Primary color for active dot */
-  opacity: 1;
-}
-
-/* SECTION TITLE */
-.section__title--projects {
-  margin-bottom: 4rem;
-}
-.project__btn {
-  display: inline-block;
-  background-color: var(--color-primary); /* Main blue color */
-  color: #fff; /* Text color */
-  font-size: 1.6rem;
-  font-family: inherit;
-  font-weight: 500; /* Regular weight */
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s, color 0.3s, font-weight 0.3s; /* Add transition for font-weight */
-}
-
-.project__btn:hover {
-  background-color: var(--color-primary-darker); /* Darken background color */
-  color: #fff; /* Ensure the text color remains consistent on hover */
-  font-weight: bold; /* Make text bold on hover */
-  text-decoration: none; /* Ensure no underline on hover */
-}
-
-/* Skills Section */
-/* Container for the grid */
-/* Container for the grid */
-/* Container for images */
-/* Ensure the parent container is wide enough */
-
-/* Flex container for images */
-.image-container {
-  display: flex; /* Align items in a row */
-  gap: 1rem; /* Space between images */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  align-items: center; /* Vertically center images */
-}
-
-/* Image styling */
-.image-container img {
-  max-width: 100px; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-/*
-
-
-
-*/
-operations__content--3 .skills-container {
-  margin-bottom: 20px; /* Space between the skills and LeetCode section */
-}
-
-
-
-.operations__content--3 .leetcode-container {
-  display: flex;
-  align-items: center;
-  margin-top: 40px; /* Space between skill badges and LeetCode section */
-}
-
-.operations__content--3 .leetcode-container p {
-  margin: 0;
-  margin-right: 10px; /* Space between text and LeetCode icon */
-}
-
-.operations__content--3 .leetcode-container .leetcode-icon {
-  width: 40px; /* Adjust icon size as needed */
-  height: auto;
-}
-
-/******
-
-
-*/
-
-
-.section--contact {
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.section--contact .section__header {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.footer__link {
-  color:var(--color-primary); /* Replace with your preferred color */
-}
-
-/* Add this to your existing CSS */
-
-/* Mobile Styles */
 @media only screen and (max-width: 768px) {
-  .nav {
-    padding: 0 2rem;
-  }
-  
-  .nav__links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .nav__item {
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
-  
-  .header__title h1 {
-    font-size: 4rem;
-  }
-
-  .header__img {
-    max-width: 20rem;
-  }
-
   .section {
-    padding: 8rem 2rem;
+    padding: 10rem 2rem;
   }
 
-  .section__title {
-    margin-bottom: 4rem;
+  .features__feature {
+    width: 100%;
   }
 
+  .footer__nav {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .footer__item {
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .section__header {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
-  .btn {
-    padding: 1rem 3rem;
-  }
-
-  .operations__tab-container {
-    flex-direction: column;
-  }
-
-  .operations__tab {
-    margin-bottom: 1rem;
-  }
-
-  .operations__content {
-    padding: 2rem;
-  }
-
-  .skills-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .image-container img {
-    margin: 0.5rem;
-  }
-  
-  .project__details {
-    text-align: left;
-  }
-  
-  .project__title {
-    font-size: 2rem;
-  }
-  
-  .project__description {
+  .section__description {
     font-size: 1.5rem;
   }
 
-  .footer {
-    padding: 2rem;
-    text-align: center;
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
   }
 
-  .footer__link {
-    display: block;
-    margin-top: 1rem;
+  .btn--text {
+    font-size: 1.5rem;
   }
 }
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Ensure vertical scrolling */
+  height: 100%; /* Ensure full height */
+}
+
+* {
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* .nav, .section {
+  max-width: 100%;
+  overflow-x: hidden;
+} */
+

@@ -1,0 +1,36 @@
+.section--contact {
+  padding: 10rem 3rem; /* Adjust padding for a better fit */
+  border-top: 1px solid #ddd;
+  text-align: center; /* Center-align the section content */
+}
+
+.section__title {
+  max-width: 80rem;
+  margin: 0 auto 5rem auto; /* Adjust margin for better spacing */
+}
+
+.section__header {
+  font-size: 3.5rem; /* Adjust font size to match the design */
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-primary); /* Set color for header */
+}
+
+/* Ensure styles are applied specifically to the Contact Me button */
+.btn.contact-me {
+  margin-top: 2rem; /* Add spacing above the button */
+  background-color: var(--color-primary); /* Ensure the background color is applied */
+  color: black; /* Ensure text color is white */
+  font-size: 1.6rem; /* Match font size */
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 3rem; /* Match padding */
+  border-radius: 5rem; /* Match border-radius */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn.contact-me:hover {
+  background-color: var(--color-primary-darker); /* Match hover effect */
+}

@@ -1,0 +1,220 @@
+/* Expertise section styles */
+:root {
+  --color-primary: #1d8fd6;
+  --color-secondary: #FFC436;
+  --color-tertiary: #D2DE32;
+  --color-primary-darker: #157fc0;
+  --color-secondary-darker: #c58d09;
+  --color-tertiary-darker: #a3ad15;
+  --color-primary-opacity: #4791c0;
+  --color-secondary-opacity: #f8cf70;
+  --color-tertiary-opacity: #e7f074;
+  --gradient-primary: linear-gradient(to top left, #0946b8, #37add1);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.section {
+  padding: 15rem 3rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section__title {
+  max-width: 80rem;
+  margin: 0 auto 8rem auto;
+}
+
+.section__description {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.section__header {
+  font-size: 4rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-align: center;
+  color: var(--header-text-color);
+}
+
+.operations {
+  max-width: 100rem;
+  margin: 12rem auto 0 auto;
+  background-color: #fff;
+  padding: 0 1rem; /* Add padding for better spacing on mobile */
+}
+
+.operations__tab-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+  justify-content: center;
+}
+
+.operations__tab {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  margin: 0.5rem; /* Add margin to ensure space around each tab */
+  border: none;
+  border-radius: 5px;
+  color: black;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content within the tab */
+  box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+.operations__tab span {
+  margin-right: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  color: black;
+}
+
+.operations__tab i {
+  color: black;
+  margin-right: 1rem;
+}
+
+.operations__tab--1 {
+  background-color: var(--color-secondary);
+}
+
+.operations__tab--1:hover {
+  background-color: var(--color-secondary-darker);
+}
+
+.operations__tab--2 {
+  background-color: var(--color-primary);
+}
+
+.operations__tab--2:hover {
+  background-color: var(--color-primary-darker);
+}
+
+.operations__tab--3 {
+  background-color: var(--color-tertiary);
+}
+
+.operations__tab--3:hover {
+  background-color: var(--color-tertiary-darker);
+}
+
+.operations__content {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-grey-dark-2);
+  display: none;
+  opacity: 0;
+  padding: 6rem;
+  padding-bottom: 8rem;
+  transition: all 1s;
+}
+
+.operations__content--active {
+  display: block;
+  opacity: 1;
+  position: relative;
+}
+
+.operations__icon {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.operations__icon--1 {
+  background-color: var(--color-secondary);
+}
+
+.operations__icon--2 {
+  background-color: var(--color-primary);
+}
+
+.operations__icon--3 {
+  background-color: var(--color-tertiary);
+}
+
+.operations__header {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-grey-dark-1);
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+p strong {
+  color: #333;
+}
+
+.operations__content--1,
+.operations__content--2,
+.operations__content--3 {
+  background-color: #f7f7f7;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.06);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.image-container img {
+  margin: 0.5rem;
+}
+
+.leetcode-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.leetcode-container p {
+  margin: 0;
+  margin-right: 1rem;
+}
+
+.leetcode-container img.leetcode-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  display: block !important;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 767px) {
+  .operations {
+    padding: 0 1rem; /* Ensure padding on mobile */
+  }
+
+  .operations__tab {
+    flex: 1 1 100%; /* Allow tabs to take full width and wrap */
+    max-width: 100%; /* Ensure tab does not exceed container width */
+    padding: 1rem; /* Adjust padding for mobile */
+    font-size: 1.4rem; /* Adjust font size for mobile */
+    margin: 0.5rem 0; /* Vertical margin for spacing between tabs */
+  }
+}

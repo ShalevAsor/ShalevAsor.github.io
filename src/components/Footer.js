@@ -1,16 +1,17 @@
 import React from 'react';
+import './Footer.css'; // Ensure this path is correct
 
 const Footer = () => (
   <footer className="footer">
     <p className="footer__copyright">
-      &copy; {new Date().getFullYear()} by
+      &copy; {new Date().getFullYear()} by 
       <a
         className="footer__link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/ShalevAsor"
       >
-        Shalev Asor
+         Shalev Asor
       </a>
       . All rights reserved.
     </p>

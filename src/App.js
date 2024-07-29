@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
@@ -7,6 +6,7 @@ import Expertise from './components/Expertise';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   useEffect(() => {
@@ -22,19 +22,11 @@ const App = () => {
       e.preventDefault();
       if (e.target.classList.contains('nav__link')) {
         const id = e.target.getAttribute('href');
-        document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+        const targetElement = document.querySelector(id);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
       }
-    };
-
-    const handleTabClick = (e) => {
-      const clicked = e.target.closest('.operations__tab');
-      if (!clicked) return;
-
-      document.querySelectorAll('.operations__tab').forEach(t => t.classList.remove('operations__tab--active'));
-      document.querySelectorAll('.operations__content').forEach(c => c.classList.remove('operations__content--active'));
-
-      clicked.classList.add('operations__tab--active');
-      document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active');
     };
 
     const handleHover = (e, opacity) => {
@@ -83,6 +75,8 @@ const App = () => {
       const btnRight = document.querySelector('.slider__btn--right');
       const dotContainer = document.querySelector('.dots');
 
+      if (!slides.length || !btnLeft || !btnRight || !dotContainer) return;
+
       let curSlide = 0;
       const maxSlide = slides.length;
 
@@ -94,7 +88,8 @@ const App = () => {
 
       const activateDot = (slide) => {
         document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove('dots__dot--active'));
-        document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active');
+        const dot = document.querySelector(`.dots__dot[data-slide="${slide}"]`);
+        if (dot) dot.classList.add('dots__dot--active');
       };
 
       const goToSlide = (slide) => {
@@ -140,7 +135,6 @@ const App = () => {
     const initObserversAndListeners = () => {
       const btnScrollTo = document.querySelector('.btn--scroll-to');
       const navLinks = document.querySelector('.nav__links');
-      const tabsContainer = document.querySelector('.operations__tab-container');
       const nav = document.querySelector('.nav');
       const header = document.querySelector('.header');
       const allSections = document.querySelectorAll('.section');
@@ -148,37 +142,56 @@ const App = () => {
 
       if (btnScrollTo) btnScrollTo.addEventListener('click', handleScrollToSection);
       if (navLinks) navLinks.addEventListener('click', handleNavClick);
-      if (tabsContainer) tabsContainer.addEventListener('click', handleTabClick);
       if (nav) {
         nav.addEventListener('mouseover', (e) => handleHover(e, 0.5));
         nav.addEventListener('mouseout', (e) => handleHover(e, 1));
       }
 
-      const navHeight = nav ? nav.getBoundingClientRect().height : 0;
-      const headerObserver = new IntersectionObserver(handleStickyNav, {
-        root: null,
-        threshold: 0,
-        rootMargin: `-${navHeight}px`,
-      });
-      if (header) headerObserver.observe(header);
+      if (nav && header) {
+        const navHeight = nav.getBoundingClientRect().height;
+        const headerObserver = new IntersectionObserver(handleStickyNav, {
+          root: null,
+          threshold: 0,
+          rootMargin: `-${navHeight}px`,
+        });
+        headerObserver.observe(header);
+      }
 
-      const sectionObserver = new IntersectionObserver(handleRevealSection, {
-        root: null,
-        threshold: 0.15,
-      });
-      allSections.forEach((section) => {
-        sectionObserver.observe(section);
-        section.classList.add('section--hidden');
-      });
+      if (allSections) {
+        const sectionObserver = new IntersectionObserver(handleRevealSection, {
+          root: null,
+          threshold: 0.15,
+        });
+        allSections.forEach((section) => {
+          sectionObserver.observe(section);
+          section.classList.add('section--hidden');
+        });
+      }
 
-      const imgObserver = new IntersectionObserver(handleLoadImg, {
-        root: null,
-        threshold: 0,
-        rootMargin: '200px',
-      });
-      imgTargets.forEach((img) => imgObserver.observe(img));
+      if (imgTargets) {
+        const imgObserver = new IntersectionObserver(handleLoadImg, {
+          root: null,
+          threshold: 0,
+          rootMargin: '200px',
+        });
+        imgTargets.forEach((img) => imgObserver.observe(img));
+      }
 
       handleSlider();
+
+      // Add event listeners for Contact Me buttons
+      const btnContactMe = document.querySelector('.btn.contact-me');
+      const btnContactMeNavBar = document.querySelector('.nav__link.nav__link--btn');
+
+      const handleContactMeClick = (e) => {
+        e.preventDefault();
+        const email = 'shalevasor@gmail.com';
+        const mailtoLink = `mailto:${email}`;
+        window.location.href = mailtoLink;
+      };
+
+      if (btnContactMe) btnContactMe.addEventListener('click', handleContactMeClick);
+      if (btnContactMeNavBar) btnContactMeNavBar.addEventListener('click', handleContactMeClick);
     };
 
     initObserversAndListeners();

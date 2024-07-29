@@ -1,0 +1,30 @@
+/* FOOTER */
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 2rem 0; /* Padding to center the text vertically */
+  text-align: center; /* Center-align text */
+}
+
+.footer__copyright {
+  font-size: 1.2rem; /* Adjust as needed */
+  color: #fff; /* White text */
+  margin: 0; /* Remove any default margins */
+}
+
+.footer__link {
+  color: var(--color-primary); /* Blue color for your name */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--color-primary-darker); /* Darker blue on hover */
+}
+
+/* Ensure that any additional styles are in place */
+@media only screen and (max-width: 480px) {
+  .footer__copyright {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+}
